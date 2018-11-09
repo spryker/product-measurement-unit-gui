@@ -6,6 +6,8 @@
 
 ## Installation
 
+**This module is not continued at this point.**
+
 ```
 composer require spryker/product-measurement-unit-gui
 ```
