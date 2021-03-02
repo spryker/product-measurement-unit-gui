@@ -1,4 +1,4 @@
-namespace: SprykerTest\Zed\StateMachine
+namespace: SprykerTest\Glue\ProductConfigurationsPriceProductVolumesRestApi
 
 paths:
     tests: .
@@ -12,9 +12,9 @@ coverage:
     whitelist: { include: ['../../../../src/*'] }
 
 suites:
-    Business:
-        path: Business
-        class_name: StateMachineBusinessTester
+    Plugin:
+        path: Plugin
+        class_name: ProductConfigurationsPriceProductVolumesRestApiPluginTester
         modules:
             enabled:
                 - Asserts
@@ -22,6 +22,3 @@ suites:
                 - \SprykerTest\Shared\Testify\Helper\ConfigHelper
                 - \SprykerTest\Shared\Testify\Helper\LocatorHelper
                 - \SprykerTest\Shared\Testify\Helper\DependencyHelper
-                - \SprykerTest\Shared\Testify\Helper\DataCleanupHelper
-                - \SprykerTest\Shared\Propel\Helper\TransactionHelper
-                - \SprykerTest\Zed\StateMachine\Helper\StateMachineHelper
