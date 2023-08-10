@@ -1,22 +1,21 @@
 {
-    "name": "spryker/shipment-type-cart",
+    "name": "spryker/sales-shipment-type",
     "type": "library",
-    "description": "ShipmentTypeCart module",
+    "description": "SalesShipmentType module",
     "license": "proprietary",
     "require": {
         "php": ">=8.0",
-        "spryker/cart": "^7.0.0",
-        "spryker/cart-extension": "^4.2.0",
-        "spryker/checkout-extension": "^1.2.0",
+        "spryker/checkout-extension": "^1.0.0",
         "spryker/kernel": "^3.30.0",
-        "spryker/quote-extension": "^1.2.0",
+        "spryker/propel-orm": "^1.0.0",
+        "spryker/sales": "^11.0.0",
+        "spryker/shipment": "^8.0.0",
         "spryker/shipment-type": "^0.1.0",
         "spryker/transfer": "^3.27.0"
     },
     "require-dev": {
         "spryker/code-sniffer": "*",
         "spryker/propel": "*",
-        "spryker/store": "*",
         "spryker/testify": "*"
     },
     "autoload": {
