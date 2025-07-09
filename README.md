@@ -1,15 +1,15 @@
-# Spryker Commerce OS
+# ProductMeasurementUnitGui Module
+[![Latest Stable Version](https://poser.pugx.org/spryker/product-measurement-unit-gui/v/stable.svg)](https://packagist.org/packages/spryker/product-measurement-unit-gui)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.2-8892BF.svg)](https://php.net/)
 
-## Core Modules
+ProductMeasurementUnitGui is a user interface module to manage product measurement units in the Zed Administration Interface.
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/spryker/spryker-core/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/spryker/spryker-core/?branch=master)
-[![Minimum PHP Version](http://img.shields.io/badge/php-%3E%3D%208.1-8892BF.svg)](https://php.net/)
+## Installation
 
-This is a mono-repo of our Spryker modules.
-If you want to make a PR with suggested changes, please do so in the specific module repository
-`https://github.com/spryker/{module-name}`.
+```
+composer require spryker/product-measurement-unit-gui
+```
 
-### Links
-- **[Spryker Documentation](https://docs.spryker.com/)**
+## Documentation
 
-
+[Spryker Documentation](https://docs.spryker.com)
