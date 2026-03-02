@@ -77,9 +77,6 @@ class IndexController extends AbstractController
      */
     protected const PAGE_LIST = '/product-measurement-unit-gui';
 
-    /**
-     * @return array
-     */
     public function indexAction(): array
     {
         $productMeasurementUnitTable = $this->getFactory()->createProductMeasurementUnitTable();
@@ -87,9 +84,6 @@ class IndexController extends AbstractController
         return $this->viewResponse(['productMeasurementUnitTable' => $productMeasurementUnitTable->render()]);
     }
 
-    /**
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     public function tableAction(): JsonResponse
     {
         $productMeasurementUnitTable = $this->getFactory()->createProductMeasurementUnitTable();
@@ -97,11 +91,6 @@ class IndexController extends AbstractController
         return $this->jsonResponse($productMeasurementUnitTable->fetchData());
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\Response|array
-     */
     public function createAction(Request $request): Response|array
     {
         $form = $this->getFactory()->createProductMeasurementUnitForm();
@@ -118,11 +107,6 @@ class IndexController extends AbstractController
         return $this->viewResponse(['form' => $form->createView()]);
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $form
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|null
-     */
     protected function handleCreateForm(FormInterface $form): RedirectResponse|null
     {
         $productMeasurementUnitCollectionRequestTransfer = (new ProductMeasurementUnitCollectionRequestTransfer())
@@ -143,11 +127,6 @@ class IndexController extends AbstractController
         return null;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\Response|array
-     */
     public function editAction(Request $request): Response|array
     {
         $code = (string)$request->query->get(static::REQUEST_PARAM_CODE);
@@ -182,12 +161,6 @@ class IndexController extends AbstractController
         return $this->viewResponse(['form' => $form->createView()]);
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $form
-     * @param string $code
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|null
-     */
     protected function handleEditForm(FormInterface $form, string $code): RedirectResponse|null
     {
         $productMeasurementUnitTransfer = $form->getData();
@@ -211,11 +184,6 @@ class IndexController extends AbstractController
         return null;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
     public function deleteAction(Request $request): Response
     {
         $code = (string)$request->query->get(static::REQUEST_PARAM_CODE);
@@ -251,11 +219,6 @@ class IndexController extends AbstractController
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductMeasurementUnitCollectionResponseTransfer $response
-     *
-     * @return bool
-     */
     protected function isResponseSuccessful(ProductMeasurementUnitCollectionResponseTransfer $response): bool
     {
         return count($response->getErrors()) === 0 && count($response->getProductMeasurementUnits()) === 1;

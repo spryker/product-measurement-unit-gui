@@ -15,38 +15,18 @@ use Generated\Shared\Transfer\ProductMeasurementUnitCriteriaTransfer;
 
 interface ProductMeasurementUnitGuiToProductMeasurementUnitFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductMeasurementUnitCriteriaTransfer $productMeasurementUnitCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductMeasurementUnitCollectionTransfer
-     */
     public function getProductMeasurementUnitCollection(
         ProductMeasurementUnitCriteriaTransfer $productMeasurementUnitCriteriaTransfer
     ): ProductMeasurementUnitCollectionTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductMeasurementUnitCollectionDeleteCriteriaTransfer $productMeasurementUnitCollectionDeleteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductMeasurementUnitCollectionResponseTransfer
-     */
     public function deleteProductMeasurementUnitCollection(
         ProductMeasurementUnitCollectionDeleteCriteriaTransfer $productMeasurementUnitCollectionDeleteCriteriaTransfer
     ): ProductMeasurementUnitCollectionResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductMeasurementUnitCollectionRequestTransfer $productMeasurementUnitCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductMeasurementUnitCollectionResponseTransfer
-     */
     public function createProductMeasurementUnitCollection(
         ProductMeasurementUnitCollectionRequestTransfer $productMeasurementUnitCollectionRequestTransfer
     ): ProductMeasurementUnitCollectionResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductMeasurementUnitCollectionRequestTransfer $productMeasurementUnitCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductMeasurementUnitCollectionResponseTransfer
-     */
     public function updateProductMeasurementUnitCollection(
         ProductMeasurementUnitCollectionRequestTransfer $productMeasurementUnitCollectionRequestTransfer
     ): ProductMeasurementUnitCollectionResponseTransfer;

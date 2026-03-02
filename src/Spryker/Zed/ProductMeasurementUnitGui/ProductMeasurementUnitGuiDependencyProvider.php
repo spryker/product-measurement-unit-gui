@@ -27,11 +27,6 @@ class ProductMeasurementUnitGuiDependencyProvider extends AbstractBundleDependen
      */
     public const PROPEL_QUERY_PRODUCT_MEASUREMENT_UNIT = 'PROPEL_QUERY_PRODUCT_MEASUREMENT_UNIT';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -41,11 +36,6 @@ class ProductMeasurementUnitGuiDependencyProvider extends AbstractBundleDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductMeasurementUnitPropelQuery(Container $container): Container
     {
         $container->set(static::PROPEL_QUERY_PRODUCT_MEASUREMENT_UNIT, $container->factory(function () {
@@ -55,11 +45,6 @@ class ProductMeasurementUnitGuiDependencyProvider extends AbstractBundleDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductMeasurementUnitFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_MEASUREMENT_UNIT, function (Container $container) {

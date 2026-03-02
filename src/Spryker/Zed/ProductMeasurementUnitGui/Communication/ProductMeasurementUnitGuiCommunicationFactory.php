@@ -36,9 +36,6 @@ class ProductMeasurementUnitGuiCommunicationFactory extends AbstractCommunicatio
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductMeasurementUnitGui\Communication\Table\ProductMeasurementUnitTable
-     */
     public function createProductMeasurementUnitTable(): ProductMeasurementUnitTable
     {
         return new ProductMeasurementUnitTable(
@@ -47,17 +44,11 @@ class ProductMeasurementUnitGuiCommunicationFactory extends AbstractCommunicatio
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductMeasurementUnitGui\Dependency\Facade\ProductMeasurementUnitGuiToProductMeasurementUnitFacadeInterface
-     */
     public function getProductMeasurementUnitFacade(): ProductMeasurementUnitGuiToProductMeasurementUnitFacadeInterface
     {
         return $this->getProvidedDependency(ProductMeasurementUnitGuiDependencyProvider::FACADE_PRODUCT_MEASUREMENT_UNIT);
     }
 
-    /**
-     * @return \Orm\Zed\ProductMeasurementUnit\Persistence\SpyProductMeasurementUnitQuery
-     */
     public function getProductMeasurementUnitPropelQuery(): SpyProductMeasurementUnitQuery
     {
         return $this->getProvidedDependency(ProductMeasurementUnitGuiDependencyProvider::PROPEL_QUERY_PRODUCT_MEASUREMENT_UNIT);

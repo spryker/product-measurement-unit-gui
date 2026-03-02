@@ -98,21 +98,12 @@ class ProductMeasurementUnitTable extends AbstractTable
      */
     protected const COLUMN_LABEL_ACTIONS = 'Actions';
 
-    /**
-     * @param \Orm\Zed\ProductMeasurementUnit\Persistence\SpyProductMeasurementUnitQuery $productMeasurementUnitQuery
-     * @param \Spryker\Zed\ProductMeasurementUnitGui\Dependency\Facade\ProductMeasurementUnitGuiToProductMeasurementUnitFacadeInterface $productMeasurementUnitFacade
-     */
     public function __construct(
         protected SpyProductMeasurementUnitQuery $productMeasurementUnitQuery,
         protected ProductMeasurementUnitGuiToProductMeasurementUnitFacadeInterface $productMeasurementUnitFacade
     ) {
     }
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     protected function configure(TableConfiguration $config): TableConfiguration
     {
         $config->setHeader([
@@ -143,11 +134,6 @@ class ProductMeasurementUnitTable extends AbstractTable
         return $config;
     }
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return array
-     */
     protected function prepareData(TableConfiguration $config): array
     {
         $productMeasurementUnitEntityCollection = $this->runQuery(

@@ -38,12 +38,6 @@ class ProductMeasurementUnitForm extends AbstractType
      */
     protected const FIELD_DEFAULT_PRECISION = 'default_precision';
 
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     * @param array $options
-     *
-     * @return void
-     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $this->addFieldCode($builder, $options)
@@ -51,11 +45,6 @@ class ProductMeasurementUnitForm extends AbstractType
             ->addFieldDefaultPrecision($builder);
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         parent::configureOptions($resolver);
